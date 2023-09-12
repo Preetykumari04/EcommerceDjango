@@ -1,0 +1,28 @@
+{% load  static %}
+{% include 'header.html'%}
+    <section style=" padding-bottom:40px;" >
+        <h1 class="heading" style="text-align: center; margin-bottom: 50px;">Kid's Boys Collection</h1>
+        <div class="container">
+            <div class="row">
+                {% for kidboyss in kidboys %}
+                <div class="col-md-4">
+                    <div class="card" style="width: 100%; ">
+                        <img src="../../{{kidboyss.image}}">
+                        <div class="card-body">
+                            <h3 class="cardheading">Dark Red Classic Shirt</h3>
+                            <span style="background-color:yellow;">Offer Price:- {{kidboyss.offerp}}/-</span><br>
+                            Price:- <strike>{{kidboyss.price}}/-</strike><br>
+                            <div class="Cbtn">
+                                
+                                <a href="{% url 'add_to_cart' 'kidboys' kidboyss.id  %}" class="Cardbtn" style="margin-left: 15px;">Add to cart</a>
+                            </div>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </section>
+    {% include 'footer.html'%}

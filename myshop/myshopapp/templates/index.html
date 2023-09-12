@@ -1,0 +1,383 @@
+{% load  static %}
+{% include 'header.html'%}
+  
+  <section class="container-fluid main1" style="padding-top:20px;background-color: #f6f8f8;">
+    <div class="row">
+      <div class="col-lg-6">
+        <div>
+          <img src="{% static 'images/left-banner-image.jpg' %}"alt="left banner" style="padding:0px 15px; width:100%;  ">
+          <h1 class="Med1">We Are My Shop</h1>
+          <p class="Med2">Awesome,Clean and Creative Clothes</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-6">
+            <div style="padding-bottom:50px;">
+              <img src="{% static 'images/baner-right-image-01.jpg' %}" style="padding:0px 15px; width:100%;">
+              <h1 class="Med3">Women</h1>
+              <p class="Med4">Best Clothes For Women</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div style="padding-bottom:50px;">
+              <img src="{% static 'images/baner-right-image-02.jpg' %}" style="padding:0px 15px; width:100%; ">
+              <h1 class="Med5">Men</h1>
+              <p class="Med6">Best Clothes For Men</p>
+            </div>
+          </div>
+          <div class="col-lg-6 ">
+            <div style="padding-bottom:50px;">
+              <img src="{% static 'images/baner-right-image-03.jpg' %}" style="padding:0px 15px; width:100%;">
+              <h1 class="Med7">Kids</h1>
+              <p class="Med8" style="color: white;">Best Clothes For Kids</p>
+            </div>
+          </div>
+          <div class="col-lg-6 ">
+            <div style="padding-bottom:50px;">
+              <img src="{% static 'images/baner-right-image-04.jpg' %}" style="padding:0px 15px; width:100%; ">
+              <h1 class="Med9" style="color: white;">Accessories</h1>
+              <p class="Med10" style="color: white;">Best Trends Accessories</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style=" padding-bottom:40px;" id="section-men">
+    <h1 class="heading">Men's Latest</h1>
+    <p class="caption">Smart and Polished outfit: Blazer,T-shirt,Shirt and Jacket.</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width:100% ;">
+            <div class="image-over">
+              <img src="{% static 'images/men-01.jpg' %}" alt="Avatar" class="image-men">
+              <div class="overlay-men">
+                <div class="overlay-text-men">
+                 <p>Broad Collection of Men's Shirt with unique Design and Different Colours.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="{% url 'menshirt' %}">
+                <h3 class="cardheading">Men Shirt Collection</h3>
+              </a>
+             
+
+              <p class="card-text"></p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width:100%; ">
+            <div class="image-over">
+              <img src="{% static 'images/men-02.jpg' %}" alt="Avatar" class="image-men">
+
+              <div class="overlay-men">
+                <div class="overlay-text-men">
+                 <p>Broad Collection of Men's T-Shirt with unique Design and Different Colours.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="{% url 'mentshirt' %}">
+                <h3 class="cardheading">Men T-Shirt Collection</h3>
+              </a>
+              
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width:100%;">
+           <div class="image-over">
+              <img src="{% static 'images/men-03.jpg' %}" alt="Avatar" class="image-men">
+              <div class="overlay-men">
+                <div class="overlay-text-men">
+                 <p>Broad Collection of Men's Jeans with unique Design and Different Colours.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="{% url 'menjeans' %}">
+                <h3 class="cardheading">Men Jeans Collection</h3>
+              </a>
+             
+
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section style=" padding-bottom:40px;" id="section-women">
+    <h1 class="heading">Women's Latest</h1>
+    <p class="caption">Stylish and trendy women's outfit featuring a dress and stylish shoes.</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width:100% ;">
+            <div class="image-over-girl">
+              <img src="{% static 'images/jeans girl.jpeg' %}" alt="Avatar" class="image-men">
+              <div class="overlay-girl">
+                <div class="overlay-text-girl">
+                 <p>Broad Collection of Women's Jeans with unique Design and Different Colours.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="{% url 'womenjeans' %}">
+                <h3 class="cardheading">Women Jeans Collection</h3>
+              </a>
+              
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 100%; ">
+            <div class="image-over-girl">
+              <img src="{% static 'images/top1.jpg' %}" alt="Avatar" class="image-men">
+              <div class="overlay-girl">
+                <div class="overlay-text-girl">
+                 <p>Broad Collection of Women's Top with unique Design and Different Colours.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="{% url 'womentop' %}">
+                <h3 class="cardheading">Woman Top Collections</h3>
+              </a>
+             
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width:100%;">
+            <div class="image-over-girl">
+              <img src="{% static 'images/kurti.jpeg' %}" alt="Avatar" class="image-men">
+              <div class="overlay-girl">
+                <div class="overlay-text-girl">
+                 <p>Broad Collection of Women's kurti with unique Design and Different Colours.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="{% url 'womenkurti' %}">
+                <h3 class="cardheading">Kurti Collection</h3>
+              </a>
+             
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section style=" padding-bottom:40px;" id="section-kid">
+    <h1 class="heading">Kid's Latest</h1>
+    <p class="caption">Adorable and comfortable kids' attire with a cute t-shirt and comfortable shorts.</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width: 100%; ">
+            <div class="image-over-kid">
+              <img src="{% static 'images/kdress11.jpeg' %}" alt="Avatar" class="image-men">
+              <div class="overlay-kid">
+                <div class="overlay-text-kid">
+                 <p>Broad Collection of girl's Gaon with unique Design and Different Colours.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="{% url 'kidgawn' %}">
+                <h3 class="cardheading">Girls Gaon Collection</h3>
+              </a>
+             
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 100%; ">
+            <div class="image-over-kid">
+              <img src="{% static 'images/kiddress11.jpeg' %}" alt="Avatar" class="image-men">
+              <div class="overlay-kid">
+                <div class="overlay-text-kid">
+                 <p>Broad Collection of girl's Summer Stylish with unique Design and Different Colours.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="{% url 'kidgirlsummer' %}">
+                <h3 class="cardheading">Summer Stylish Collection</h3>
+              </a>
+              
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width:100%;">
+            <div class="image-over-kid">
+              <img src="{% static 'images/kid1.jpeg' %}" alt="Avatar" class="image-men">
+              <div class="overlay-kid">
+                <div class="overlay-text-kid">
+                 <p>Broad Collection of Boy's clothes with unique Design and Different Colours.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="{% url 'kidboy' %}">
+                <h3 class="cardheading">Classic Kid Collection</h3>
+              </a>
+              
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="container-fluid" style="padding-top:40px;padding-bottom:40px;">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1 id="phead">Explore Our Products</h1>
+        <p class="paragraph">
+          Elevate your wardrobe with our fashion-forward clothing collection. From trendy t-shirts and cozy sweaters to
+          chic dresses and versatile jeans, we have something for every style.</p>
+        <p class="paragraph"> Our high-quality fabrics ensure both comfort and durability. Whether you're dressing up
+          for a special occasion or looking for casual everyday wear, we've got you covered.</p>
+        <p class="paragraph">
+          Explore our wide range of colors, patterns, and sizes to find the perfect fit for you. Upgrade your fashion
+          game with our stylish and affordable clothing options today!</p>
+        <p class="paragraph">Introducing our stylish and high-quality clothes collection: find the perfect blend of
+          comfort and fashion with our trendy t-shirts, cozy sweaters, chic dresses, versatile jeans, and more, designed
+          to elevate your wardrobe effortlessly.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-6">
+            <div style="padding-bottom:50px;">
+              <img src="{% static 'images/explore-image-01.jpg' %}" style="padding:0px 15px; width:100%;  ">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div style="padding-bottom:50px;">
+              <img src="{% static 'images/explore-image-02.jpg' %}" style="padding:0px 15px; width:100%;  ">
+            </div>
+          </div>
+          <div class="col-lg-6 ">
+            <div style="padding-bottom:50px;">
+              <img src="{% static 'images/service-01.jpg' %}" style="padding:0px 15px; width:100%;">
+            </div>
+          </div>
+          <div class="col-lg-6 ">
+            <div style="padding-bottom:50px;">
+              <img src="{% static 'images/service-03.jpg' %}" style="padding:0px 15px; width:100%; ">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  
+  <section class="container-fluid" style="padding-bottom:40px;">
+    <h1 class="heading">Social Media</h1>
+    <p class="caption">Stand out on social media with our trendy and eye-catching clothes.</p>
+    <div class="row">
+      <div class="container" style="display:flex;">
+        <div class="col-lg-2" style="padding:0px">
+          <img src="{% static 'images/instagram-01.jpg' %}" width="100%" alt="instagram-01">
+        </div>
+        <div class="col-lg-2" style="padding:0px">
+          <img src="{% static 'images/instagram-02.jpg' %}" width="100%" alt="instagram-02">
+        </div>
+        <div class="col-lg-2" style="padding:0px">
+          <img src="{% static 'images/instagram-03.jpg' %}" width="100%" alt="instagram-03">
+        </div>
+        <div class="col-lg-2" style="padding:0px">
+          <img src="{% static 'images/instagram-04.jpg' %}" width="100%" alt="instagram-04">
+        </div>
+        <div class="col-lg-2" style="padding:0px">
+          <img src="{% static 'images/instagram-05.jpg' %}" width="100%" alt="instagram-05">
+        </div>
+        <div class="col-lg-2" style="padding:0px">
+          <img src="{% static 'images/instagram-06.jpg' %}" width="100%" alt="instagram-06">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container-fluid" style="padding-top:40px;padding-bottom:50px;">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1 class="heading" style="padding-top: 0px!important;">
+          By Subscribing To Our newsletter You Can Get 30% Off
+        </h1>
+
+        <form>
+          <input class="form" type="text" name="name" placeholder="Your Name" required><br><br>
+          <input class="form" type="Email" name="email" placeholder="Your Email Address" required><br><br>
+          <button id="formbtn" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="Content">
+              <h2 class="Headingtestimonial">Store Location:</h2>
+              <p class="captiontestimonial">Codezeal Technology Pvt.Ltd</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="Content">
+              <h2 class="Headingtestimonial">Work Hours:</h2>
+              <p class="captiontestimonial">07:30 AM - 9:30 PM Daily</p>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <div class="Content">
+              <h2 class="Headingtestimonial">Phone:</h2>
+              <p class="captiontestimonial">010-020-0340</p>
+            </div>
+
+
+          </div>
+
+          <div class="col-lg-6">
+            <div class="Content">
+              <h2 class="Headingtestimonial">Email:</h2>
+              <p class="captiontestimonial">info@company.com</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="Content">
+              <h2 class="Headingtestimonial">Office Location:</h2>
+              <p class="captiontestimonial">Mimec IT Park</p>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <div class="Content">
+              <h2 class="Headingtestimonial">Social Media:</h2>
+              <p class="captiontestimonial">Facebook,Instagram,Linkedin</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include 'footer.html'%}
+  

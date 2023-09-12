@@ -1,0 +1,60 @@
+.bg {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#main1{
+    
+    margin-top: -730px;
+    margin-left: 700px;
+}
+#img{
+    margin-top:20px;
+    width: 50%;
+}
+#loginsection{
+    padding-left: 30px;
+    padding-top: 25px;
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+#button{
+   border-radius: 10px; 
+   width:250px;
+   height: 28px;
+   font-weight: bold;
+   font-size: 13px;
+}
+#facebook{
+   padding-left: 75px;
+    
+}
+#twitter{
+    width: 40px;
+    padding-left:15px;
+   
+}
+#google{
+    width: 40px;
+    padding-left:15px;
+   
+}
+.text{
+    margin-top: 10px;
+    height: 25px;
+    width:250px;
+}
+.down{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+   
+}
+#signupsection{
+    padding-left: 30px;
+    padding-top:5px;
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

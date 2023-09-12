@@ -1,0 +1,88 @@
+{% load  static %}
+{% include 'header.html'%}
+    <section>
+        <div>
+            <img src="{% static 'images/about-us-page-heading.jpg' %}" alt="about-us-page-heading" class="bannerimg">
+            <h1 class="Med11">Contact Us</h1>
+        </div>
+
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.9024329881936!2d85.35833627500166!3d23.35554907894178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e37540db78a7%3A0xb44f47201789f795!2sCodezeal%20Technology%20Private%20Limited!5e0!3m2!1sen!2sin!4v1689596303731!5m2!1sen!2sin"
+                    width="520" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col-md-6">
+                <h1 id="sayhead">Say Hello. Don't Be Shy!</h1>
+             
+                <input class="input1 " type="text" placeholder="Your Name"><input class="input1 in" type="email"
+                    placeholder="Your email"><br><br>
+                <input id="input2" type="textarea" placeholder="your message">
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid" style="padding-top:40px;padding-bottom:50px;">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="heading" style="padding-top: 0px!important;">
+              By Subscribing To Our newsletter You Can Get 30% Off
+            </h1>
+    
+            <form>
+              <input class="form" type="text" name="name" placeholder="Your Name" required><br><br>
+              <input class="form" type="Email" name="email" placeholder="Your Email Address" required><br><br>
+              <button id="formbtn" type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="Content">
+                  <h2 class="Headingtestimonial">Store Location:</h2>
+                  <p class="captiontestimonial">Codezeal Technology Pvt.Ltd</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="Content">
+                  <h2 class="Headingtestimonial">Work Hours:</h2>
+                  <p class="captiontestimonial">07:30 AM - 9:30 PM Daily</p>
+                </div>
+    
+              </div>
+              <div class="col-lg-6">
+                <div class="Content">
+                  <h2 class="Headingtestimonial">Phone:</h2>
+                  <p class="captiontestimonial">010-020-0340</p>
+                </div>
+    
+    
+              </div>
+    
+              <div class="col-lg-6">
+                <div class="Content">
+                  <h2 class="Headingtestimonial">Email:</h2>
+                  <p class="captiontestimonial">info@company.com</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="Content">
+                  <h2 class="Headingtestimonial">Office Location:</h2>
+                  <p class="captiontestimonial">Mimec IT Park</p>
+                </div>
+    
+              </div>
+              <div class="col-lg-6">
+                <div class="Content">
+                  <h2 class="Headingtestimonial">Social Media:</h2>
+                  <p class="captiontestimonial">Facebook,Instagram,Linkedin</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+ {% include 'footer.html'%}

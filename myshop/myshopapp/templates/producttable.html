@@ -1,0 +1,27 @@
+<table>
+    <thead>
+        <th>Product id</th>
+        <th>Product name</th>
+        <th>Product Image</th>
+        <th>Price</th>
+        <th>Offer Price</th>
+        <th>GST</th>
+        <th>Discount</th>
+        
+       
+    </thead>
+    <tbody>
+        {% for i in data %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.product_name}}</td>
+            <td>{{i.product_img}}</td>
+            <td>{{i.product_price}}</td>
+            <td>{{i.product_oprice}}</td>
+            <td>{{i.product_gst}}</td>
+            <td>{{i.product_dprice}}</td>
+            
+        </tr>
+         {% endfor %}
+    </tbody>
+</table>

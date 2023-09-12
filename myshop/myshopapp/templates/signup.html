@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body
+    style="background-image: url(../static/images/loginbanner.jpg); background-attachment: fixed; background-size: cover; ">
+    <div class="container">
+        <div class="card" style="width: 350px; height:670px; margin-top: 30px; margin-left: 700px;">
+            <div class="card-body">
+                <form method="POST" action="{% url 'signup' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <img src="{% static 'images/loginlogo.png' %}" alt="logo" id="img" /><br><br>
+                    <div id="signupsection">
+                        <label>Name:</label> <br>
+                        <input class="text1" type="text" placeholder="Enter Your Name" name="name" required /><br><br>
+                        <label>Phone no:</label> <br>
+                        <input class="text1" type="Number" name="phoneno" required /><br><br>
+                        <label>Email:</label><br>
+                        <input class="text1" type="Email" placeholder="Email" name="email" required /><br><br>
+                        <label>Password:</label> <br>
+                        <input class="text1" type="password" placeholder="password" name="password" required /><br><br>
+                        <label>Confirm Password:</label> <br>
+                        <input class="text1" type="password" placeholder="Confirm password" name="cpassword" required /><br><br>
+                        <input type="submit" value="SIGN UP" id="button"><br><br>
+                        <a href="#" class="down">or Login with</a><br><br>
+                        <a href="https://www.facebook.com/"> <img src="{% static 'images/facebooklogo.png' %}"
+                                height="23" id="facebook" /></a>
+                        <a href="https://twitter.com/?lang=en-in"><img src="{% static 'images/twitterlogo.png' %}"
+                                width="26" height="23" id="twitter" /></a>
+                        <a href="https://www.google.co.in/"><img src="{% static 'images/Googlelogo.png' %}" width="26"
+                                height="23" id="google" /><br></a>
+                        <a href="{% url 'loginpage' %}" class="down">Login</a><br><br>
+                        <a href="{% url 'home' %}" class="down">Back to home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+  <script src="{% static 'js/pop.js' %}"></script>
+
+</body>
+
+</html>

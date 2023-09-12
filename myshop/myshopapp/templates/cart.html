@@ -1,0 +1,69 @@
+{% load  static %}
+{% include 'header.html'%}
+  <section class="container-fluid" style="text-align: left;">
+    <h1 class="heading">Products in Your Cart({{cart_items|length}})</h1>
+    <section class="container">
+      {% if 'email' in request.session %}
+      {% for cart_item in cart_items %}
+      <div class="row" style="margin: 0px;">
+        <div class="col-md-4" style="padding:0px;">
+          <img src="../../{{cart_item.product.image}}" alt="kb1" width="100" height="150" style="padding-top:15px;padding-bottom: 15px;">
+        </div>
+        <div class="col-md-4 text-dark" style="padding:0px; margin:0px;    padding-top: 25px;">
+          <h4>{{cart_item.product.name}}</h4>
+          {% comment %} <p>Size:<span style="padding-left: 50px;">Large(L)</span></p> {% endcomment %}
+          {% comment %} <label>Quantity:</label><span style="padding-left: 10px;"><input type="number" name="quantity" value="1"><br><br></span> {% endcomment %}
+          <p> Quantity : {{cart_item.quantity}} 
+          <a href="{% url 'qty_less' cart_item.id %}">Quantity Less</a>
+          <a href="{% url 'qty_up' cart_item.id %}">Quantity Up</a>
+          
+          <a href="{% url 'del_from_cart' cart_item.id %}"class="Cardbtn1">Remove</a>
+          {% comment %} <a href="#"class="Cardbtn1">Wishlist</a> {% endcomment %}
+        </div>
+        <div class="col-md-3 text-dark" style="padding:0px;    padding-top: 25px;">
+          <P>Price:</P>
+          <p>Offer Rate:</P>
+        </div>
+        <div class="col-md-1 text-dark" style="padding:0px;    padding-top: 25px;">
+          <p>{{cart_item.product.price}}/-</p>
+          <p>{{cart_item.product.offerp}}/-</p>
+          
+          
+        </div>
+      </div>
+      <hr>
+      {% endfor %} 
+      <p><b>Total Price :- {{total_price}}/-</b></p>
+      <a href="{% url 'buy_now' %}"class="Cardbtn1">Buy Now</a>
+      {% endif %}
+      
+    </section>
+  </section>
+  <section
+    style="background-image: url(../static/images/about-us-page-heading.jpg); width: 100%; padding-top: 50px; margin-top:45px;">
+    <footer style="margin: 0px;padding: 25px 0px;">
+      <ul class="nav justify-content-center">
+        <li class="nav-item"><a href="" class="nav-link px-2" style="color:white;">Home</a></li>
+        <li class="nav-item"><a href="#section-men" class="nav-link px-2" style="color:white;">Men's</a></li>
+        <li class="nav-item"><a href="#section-women" class="nav-link px-2" style="color:white;">Women's</a>
+        </li>
+        <li class="nav-item"><a href="#section-kid" class="nav-link px-2" style="color:white;">kid's</a></li>
+        <li class="nav-item"><a href="About.html" class="nav-link px-2" style="color:white;">About Us</a></li>
+        <li class="nav-item"><a href="Contact.html" class="nav-link px-2" style="color:white;">Contact Us</a>
+        </li>
+      </ul>
+      <p class="text-center" style="color:white; font-size:25px;">@2023 MyShop</p>
+    </footer>
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+    <script src="{% static 'js/pop.js' %}"></script>
+</body>
+
+</html>

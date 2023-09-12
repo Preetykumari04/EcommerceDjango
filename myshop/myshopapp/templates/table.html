@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<table>
+    <thead>
+        <th>Slno</th>
+        <th>Name</th>
+        <th>Phoneno</th>
+        <th>Email</th>
+        <th>password</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        {% for i in data %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.phoneno}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.password}}</td>
+            <td><a class="btn btn-sm bg-primary text-white mr-2" href="{% url 'edit_user' i.id %}">Edit</a>
+                <a class="btn btn-sm bg-danger text-white" href="{% url 'delete_user' i.id %}">Delete</a>
+                {% if i.status == 0 %}
+                <a class="btn btn-sm bg-danger text-white" href="{% url 'retrive_user' i.id %}">Retrive</a>
+                {% endif %}
+            </td>
+        </tr>
+         {% endfor %}
+    </tbody>
+</table>
